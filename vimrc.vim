@@ -27,20 +27,21 @@ set cursorline              " highlight current cursorline
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
 "########################### Begin My maps ###########################
-nnoremap <leader>o <cmd>NvimTreeToggle<cr>
+nnoremap <leader>oo <cmd>NvimTreeToggle<cr>
+nnoremap <leader>of <cmd>NvimTreeFocus<cr>
 command! -complete=file -nargs=1 Remove :echo 'Remove: '.'<f-args>'.' '.(delete(<f-args>) == 0 ? 'SUCCEEDED' : 'FAILED')
 " save a file
 nnoremap <leader>s <cmd>w<cr>
 " quit from file
 nnoremap <leader>x <cmd>q<cr>
 " save and qui
-nnoremap <leader>sx <cmd>wq<cr>
+nnoremap <leader>w <cmd>wq<cr>
 " reload file
 map <C-e> :e<Cr>
 " select all file
 nnoremap <C-a> ggVG<CR>
 " format all file
-nnoremap <C-l> gg=G<CR>
+nnoremap <C-f> gg=G<Cr>
 "########################### End My maps ###########################
 
 call plug#begin(stdpath('config') . '/plugged')
@@ -50,7 +51,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'frazrepo/vim-rainbow'
 
-" Utilities
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+Plug 'Djancyp/better-comments.nvim'
+
+"Utilities
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
@@ -68,8 +72,8 @@ Plug 'Pocco81/true-zen.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'plasticboy/vim-markdown'
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -79,7 +83,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'mfussenegger/nvim-lint'
-Plug 'mhartington/formatter.nvim'
 Plug 'onsails/lspkind-nvim'
 
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -91,6 +94,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
 Plug 'saadparwaiz1/cmp_luasnip'
 
+Plug 'elentok/format-on-save.nvim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
