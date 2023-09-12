@@ -38,10 +38,10 @@ nnoremap <leader>x <cmd>q<cr>
 nnoremap <leader>w <cmd>wq<cr>
 " reload file
 map <C-e> :e<Cr>
-" select all file
-nnoremap <C-a> ggVG<CR>
 " format all file
 nnoremap <C-f> gg=G<Cr>
+
+nnoremap <leader>nb <cmd>bNext<cr>
 "########################### End My maps ###########################
 
 call plug#begin(stdpath('config') . '/plugged')
@@ -67,6 +67,10 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-neorg/neorg'
 Plug 'Pocco81/true-zen.nvim'
+
+Plug 'MunifTanjim/nui.nvim'
+Plug 'folke/noice.nvim'
+Plug 'smjonas/inc-rename.nvim'
 
 " Completion / linters / formatters
 Plug 'nvim-lua/plenary.nvim'
