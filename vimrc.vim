@@ -1,12 +1,12 @@
 set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching 
+set showmatch               " show machine 
 set ignorecase              " case insensitive 
 set hlsearch                " highlight search 
 set incsearch               " incremental search
 set tabstop=2               " number of columns occupied by a tab 
-set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
+set softtabstop=2           " see multiple spaces as tab stops so <BS> does the right thing
 set expandtab               " converts tabs to white space
-set shiftwidth=2            " width for autoindents
+set shiftwidth=2            " width for auto indents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 set number relativenumber
@@ -34,14 +34,18 @@ command! -complete=file -nargs=1 Remove :echo 'Remove: '.'<f-args>'.' '.(delete(
 nnoremap <leader>s <cmd>w<cr>
 " quit from file
 nnoremap <leader>x <cmd>q<cr>
-" save and qui
+" save and quit
 nnoremap <leader>w <cmd>wq<cr>
+" quit all
+nnoremap <leader>qa <cmd>qall<cr>
 " reload file
 map <C-e> :e<Cr>
 " format all file
 nnoremap <C-f> gg=G<Cr>
 
 nnoremap <leader>nb <cmd>bNext<cr>
+
+nmap <Leader>z 1z=
 "########################### End My maps ###########################
 
 call plug#begin(stdpath('config') . '/plugged')
@@ -57,7 +61,6 @@ Plug 'Djancyp/better-comments.nvim'
 "Utilities
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-Plug 'ap/vim-css-color'
 
 Plug 'nvim-tree/nvim-tree.lua'
 
@@ -71,6 +74,12 @@ Plug 'Pocco81/true-zen.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'folke/noice.nvim'
 Plug 'smjonas/inc-rename.nvim'
+
+Plug 'f-person/git-blame.nvim'
+
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+
+Plug 'rcarriga/nvim-notify'
 
 " Completion / linters / formatters
 Plug 'nvim-lua/plenary.nvim'
