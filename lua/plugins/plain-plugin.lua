@@ -1,6 +1,6 @@
 return {
-  { 'frazrepo/vim-rainbow' },
+  { 'frazrepo/vim-rainbow',    lazy = true },
   { 'sheerun/vim-polyglot' },
-  { 'jiangmiao/auto-pairs' },
-  { 'plasticboy/vim-markdown' }
+  { 'jiangmiao/auto-pairs',    lazy = true },
+  { 'plasticboy/vim-markdown', lazy = true }
 }
