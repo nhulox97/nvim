@@ -1,6 +1,6 @@
-
 return {
 	"hrsh7th/nvim-cmp",
+	lazy = false,
 	dependencies = {
 		"neovim/nvim-lspconfig",
 		"mfussenegger/nvim-dap",
@@ -16,9 +16,9 @@ return {
 		"L3MON4D3/LuaSnip",
 	},
 	config = function()
-	local luasnip = require("luasnip")
-	local cmp = require("cmp")
-	local lspkind = require("lspkind")
+		local luasnip = require("luasnip")
+		local cmp = require("cmp")
+		local lspkind = require("lspkind")
 
 		cmp.setup({
 			formatting = {
