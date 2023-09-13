@@ -1,11 +1,13 @@
 return {
   'akinsho/bufferline.nvim',
-  lazy = false,
+  dependencies = {
+    { 'nvim-tree/nvim-web-devicons' },
+  },
   config = function()
     require("bufferline").setup({
       options = {
         indicator = {
-          icon = " ",
+          icon = "  ",
           style = "icon"
         },
         modified_icon = "󰛿",
@@ -22,7 +24,7 @@ return {
         show_close_icon = true,
         show_tab_icons = true,
         persist_buffer_sort = true,
-        -- separator_style = "slant",
+        separator_style = "thick",
         offsets = {
           {
             filetype = "NvimTree",

@@ -1,9 +1,6 @@
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
-  opts = {
-    -- add any options here
-  },
   dependencies = {
     "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
@@ -53,7 +50,7 @@ return {
       -- you can enable a preset for easier configuration
       presets = {
         long_message_to_split = true, -- long messages will be sent to a split
-        lsp_doc_border = false,   -- add a border to hover docs and signature help
+        lsp_doc_border = false,       -- add a border to hover docs and signature help
         inc_rename = true
       },
     }
