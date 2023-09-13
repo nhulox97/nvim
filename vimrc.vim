@@ -48,75 +48,19 @@ nnoremap <leader>nb <cmd>bNext<cr>
 nmap <Leader>z 1z=
 "########################### End My maps ###########################
 
-call plug#begin(stdpath('config') . '/plugged')
-" Appearance
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'ryanoasis/vim-devicons'
-Plug 'nvim-tree/nvim-web-devicons'
-Plug 'frazrepo/vim-rainbow'
+" call plug#begin(stdpath('config') . '/plugged')
 
-Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
-Plug 'Djancyp/better-comments.nvim'
 
-"Utilities
-Plug 'sheerun/vim-polyglot'
-Plug 'jiangmiao/auto-pairs'
 
-Plug 'nvim-tree/nvim-tree.lua'
-
-Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.1'}
-Plug 'nvim-lua/popup.nvim'
-
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-neorg/neorg'
-Plug 'Pocco81/true-zen.nvim'
-
-Plug 'MunifTanjim/nui.nvim'
-Plug 'folke/noice.nvim'
-Plug 'smjonas/inc-rename.nvim'
-
-Plug 'f-person/git-blame.nvim'
-
-Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-
-Plug 'rcarriga/nvim-notify'
 
 " Completion / linters / formatters
-Plug 'nvim-lua/plenary.nvim'
-Plug 'plasticboy/vim-markdown'
-Plug 'prettier/vim-prettier', {
-      \ 'do': 'yarn install',
-      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
 
-Plug 'neovim/nvim-lspconfig'
-
-Plug 'mfussenegger/nvim-dap'
-Plug 'rcarriga/nvim-dap-ui'
-Plug 'mfussenegger/nvim-lint'
-Plug 'onsails/lspkind-nvim'
-
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-
-Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
-Plug 'saadparwaiz1/cmp_luasnip'
-
-Plug 'elentok/format-on-save.nvim'
-
-" Git
-Plug 'airblade/vim-gitgutter'
 
 " Themes
-Plug 'sainnhe/gruvbox-material'
-Plug 'folke/tokyonight.nvim'
-Plug 'bluz71/vim-nightfly-colors'
-call plug#end()
+" Plug 'sainnhe/gruvbox-material'
+" Plug 'bluz71/vim-nightfly-colors'
+" call plug#end()
 
 
 " Airline confs Begin
@@ -133,4 +77,6 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " Theme
 colorscheme tokyonight-night
 
+let g:gitblame_display_virtual_text = 0
+let g:gitblame_date_format = '%r'
 
