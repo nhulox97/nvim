@@ -30,8 +30,8 @@ return {
       },
       sections = {
         lualine_a = { 'mode' },
-        lualine_b = { 'encoding', 'fileFormat' },
-        lualine_c = { 'filetype', 'fileName', 'diagnostics' },
+        lualine_b = { 'encoding', 'fileformat' },
+        lualine_c = { 'filetype', 'filename', 'diagnostics' },
         lualine_x = { { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available } },
         lualine_y = { 'branch', 'diff' },
         lualine_z = { 'progress', 'location' }
