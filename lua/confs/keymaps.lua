@@ -7,7 +7,6 @@ vim.keymap.set("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()
 
 vim.keymap.set("n", "<leader>oo", ":NvimTreeToggle<CR>", opts)
 vim.keymap.set("n", "<leader>of", ":NvimTreeFocus<CR>", opts)
-
 vim.keymap.set("n", "<leader>s", ":w<CR>", opts)
 vim.keymap.set("n", "<leader>x", ":q<CR>", opts)
 vim.keymap.set("n", "<leader>w", ":wq<CR>", opts)

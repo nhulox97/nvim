@@ -28,3 +28,5 @@ vim.opt.cursorline = true         -- highlight current cursorline
 
 vim.g.gitblame_display_virtual_text = 0
 vim.g.gitblame_date_format = '%r'
+
+vim.g.nvim_tree_respect_buf_cwd = 1

@@ -2,10 +2,21 @@ return {
   {
     'folke/tokyonight.nvim',
     priority = 1000,
-    lazy = false,
     config = true,
   },
   {
-    'rebelot/kanagawa.nvim'
-  }
+    'rebelot/kanagawa.nvim',
+  },
+  {
+    'nyoom-engineering/oxocarbon.nvim',
+  },
+  {
+    'Mofiqul/dracula.nvim',
+  },
+  {
+    'marko-cerovac/material.nvim',
+  },
+  {
+    'olimorris/onedarkpro.nvim',
+  },
 }
