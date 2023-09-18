@@ -2,12 +2,9 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = {
     { 'nvim-tree/nvim-web-devicons' },
-    { 'f-person/git-blame.nvim' },
   },
   lazy = false,
   config = function()
-    local git_blame = require("gitblame")
-
     require("lualine").setup({
       options = {
         icons_enabled = true,
@@ -32,8 +29,8 @@ return {
         lualine_a = { 'mode' },
         lualine_b = { 'encoding', 'fileformat' },
         lualine_c = { 'filetype', 'filename', 'diagnostics' },
-        lualine_x = { { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available } },
-        lualine_y = { 'branch', 'diff' },
+        lualine_x = { 'diff' },
+        lualine_y = { 'branch' },
         lualine_z = { 'progress', 'location' }
       },
       inactive_sections = {
