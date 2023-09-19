@@ -28,3 +28,5 @@ vim.keymap.set("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>", opts)
 vim.keymap.set("n", "]d", ":lua vim.diagnostic.goto_next()<CR>", opts)
 vim.keymap.set("n", "<leader>lq", ":lua vim.diagnostic.setloclist()<CR>", opts)
 vim.keymap.set("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>", opts) --> formats the current buffer
+
+vim.keymap.set("n", "<leader>ng", ":Neogit<CR>", opts)
