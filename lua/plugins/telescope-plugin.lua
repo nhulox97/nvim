@@ -7,6 +7,7 @@ return {
       pickers = {
         find_files = {
           theme = "dropdown",
+          dotfiles = true
         },
         diagnostics = {
           theme = "dropdown",
