@@ -17,13 +17,16 @@ return {
       },
 
       views = {
+        notify = {
+          replace = true,
+        },
         cmdline_popup = {
           position = {
             row = 5,
             col = "50%",
           },
           size = {
-            width = 60,
+            width = 70,
             height = "auto",
           },
         },

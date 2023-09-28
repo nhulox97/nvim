@@ -48,3 +48,11 @@ vim.keymap.set({ "n" }, "<LEADER>nd", require("package-info").delete, { silent =
 vim.keymap.set({ "n" }, "<LEADER>ni", require("package-info").install, { silent = true, noremap = true })
 -- Install a different dependency version
 vim.keymap.set({ "n" }, "<LEADER>np", require("package-info").change_version, { silent = true, noremap = true })
+
+vim.keymap.set("n", "]t", function()
+  require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+
+vim.keymap.set("n", "[t", function()
+  require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })
