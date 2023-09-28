@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local opts = { noremap = true, silent = true }
 
 vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>", opts)
@@ -8,9 +9,10 @@ vim.keymap.set("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()
 vim.keymap.set("n", "<leader>oo", ":NvimTreeToggle<CR>", opts)
 vim.keymap.set("n", "<leader>of", ":NvimTreeFocus<CR>", opts)
 vim.keymap.set("n", "<leader>s", ":w<CR>", opts)
-vim.keymap.set("n", "<leader>x", ":q<CR>", opts)
+vim.keymap.set("n", "<leader>x", ":bd<CR>", opts)
 vim.keymap.set("n", "<leader>w", ":wq<CR>", opts)
 vim.keymap.set("n", "<leader>qa", ":qa<CR>", opts)
+vim.keymap.set("n", "<leader>wa", ":wa<CR>", opts)
 
 vim.cmd([[
   nmap <Leader>z 1z=
@@ -30,3 +32,19 @@ vim.keymap.set("n", "<leader>lq", ":lua vim.diagnostic.setloclist()<CR>", opts)
 vim.keymap.set("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>", opts) --> formats the current buffer
 
 vim.keymap.set("n", "<leader>ng", ":Neogit<CR>", opts)
+
+-- package-info
+-- Show dependency versions
+vim.keymap.set({ "n" }, "<LEADER>ns", require("package-info").show, { silent = true, noremap = true })
+-- Hide dependency versions
+vim.keymap.set({ "n" }, "<LEADER>nc", require("package-info").hide, { silent = true, noremap = true })
+-- Toggle dependency versions
+vim.keymap.set({ "n" }, "<LEADER>nt", require("package-info").toggle, { silent = true, noremap = true })
+-- Update dependency on the line
+vim.keymap.set({ "n" }, "<LEADER>nu", require("package-info").update, { silent = true, noremap = true })
+-- Delete dependency on the line
+vim.keymap.set({ "n" }, "<LEADER>nd", require("package-info").delete, { silent = true, noremap = true })
+-- Install a new dependency
+vim.keymap.set({ "n" }, "<LEADER>ni", require("package-info").install, { silent = true, noremap = true })
+-- Install a different dependency version
+vim.keymap.set({ "n" }, "<LEADER>np", require("package-info").change_version, { silent = true, noremap = true })

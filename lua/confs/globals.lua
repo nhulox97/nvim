@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
 vim.opt.showmatch = true  -- show machine
@@ -20,14 +21,14 @@ vim.cmd([[
   syntax on
   colorscheme tokyonight-night
 ]])
-vim.opt.cc = '100'                -- vim.opt.an 80 column border for good coding style
+vim.opt.cc = '100'                -- vim.opt.an 100 column border for good coding style
 vim.opt.mouse = 'a'               -- enable mouse click
 vim.opt.clipboard = 'unnamedplus' -- using system clipboard
 vim.opt.cursorline = true         -- highlight current cursorline
 
-
 vim.g.gitblame_date_format = '%r'
 
+vim.g.nvim_tree_respect_buf_cwd = 1
 
 if vim.fn.has("wsl") == 1 then
    if vim.fn.executable("wl-copy") == 0 then
@@ -41,7 +42,7 @@ if vim.fn.has("wsl") == 1 then
          },
          paste = {
             ["+"] = (function()
-               return vim.fn.systemlist('wl-paste --no-newline|sed -e "s/\r$//"', { '' }, 1)    -- '1' keeps empty lines
+               return vim.fn.systemlist('wl-paste --no-newline|sed -e "s/\r$//"', { '' }, 1) -- '1' keeps empty lines
             end),
             ["*"] = (function()
                return vim.fn.systemlist('wl-paste --primary --no-newline|sed -e "s/\r$//"', { '' }, 1)

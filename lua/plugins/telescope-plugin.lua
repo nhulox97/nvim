@@ -16,7 +16,14 @@ return {
       defaults = {
         file_ignore_patterns = { "node_modules", "plugged" },
       },
+      extensions = {
+        package_info = {
+          theme = 'ivy',
+        }
+      }
     })
+
+    require("telescope").load_extension("package_info")
   end,
   dependencies = { 'nvim-lua/plenary.nvim' }
 }
