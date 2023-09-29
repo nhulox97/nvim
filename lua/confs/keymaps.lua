@@ -6,13 +6,15 @@ vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()
 vim.keymap.set("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>", opts)
 vim.keymap.set("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()<CR>", opts)
 
-vim.keymap.set("n", "<leader>oo", ":NvimTreeToggle<CR>", opts)
-vim.keymap.set("n", "<leader>of", ":NvimTreeFocus<CR>", opts)
-vim.keymap.set("n", "<leader>s", ":w<CR>", opts)
+vim.keymap.set("n", "<leader>tf", ":Neotree toggle current reveal_force_cwd right<CR>", opts)
+vim.keymap.set("n", "<leader>tb", ":Neotree toggle show buffers right<CR>", opts)
+vim.keymap.set("n", "<leader>tg", ":Neotree float git_status<CR>", opts)
 vim.keymap.set("n", "<leader>x", ":bd<CR>", opts)
-vim.keymap.set("n", "<leader>w", ":wq<CR>", opts)
-vim.keymap.set("n", "<leader>qa", ":qa<CR>", opts)
-vim.keymap.set("n", "<leader>wa", ":wa<CR>", opts)
+vim.keymap.set("n", "<leader>w", ":w<CR>", opts)
+vim.keymap.set("n", "<leader>wq", ":wq<CR>", opts)
+vim.keymap.set("n", "<leader>wa", ":wall<CR>", opts)
+vim.keymap.set("n", "<leader>q", ":q<CR>", opts)
+vim.keymap.set("n", "<leader>qa", ":qall<CR>", opts)
 
 vim.cmd([[
   nmap <Leader>z 1z=
