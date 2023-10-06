@@ -27,8 +27,8 @@ return {
         separator_style = "thick",
         offsets = {
           {
-            filetype = "NvimTree",
-            text = "NvimTree",
+            filetype = "neo-tree",
+            text = "neo-tree",
             text_align = "left",
             separator = true,
           }
