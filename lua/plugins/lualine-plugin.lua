@@ -1,24 +1,25 @@
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = {
-    { 'nvim-tree/nvim-web-devicons' },
+    { 'nvim-tree/nvim-web-devicons', 'meuter/lualine-so-fancy.nvim' },
   },
   lazy = false,
   config = function()
     require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = 'auto',
-        -- component_separators = { left = '', right = '' },
-        component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
+        theme = 'horizon', -- auto | horizon | gruvbox_dark | molokai | iceberg_dark | wombat | modus-vivendi | material
+        component_separators = { left = '', right = '' },
+        -- component_separators = { left = '', right = '' },
+        -- section_separators = { left = '', right = '' },
+        section_separators = { left = ' ', right = ' ' },
         disabled_filetypes = {
           statusline = {},
           winbar = {},
         },
         ignore_focus = {},
         always_divide_middle = true,
-        globalstatus = false,
+        globalstatus = true,
         refresh = {
           statusline = 1000,
           tabline = 1000,
@@ -26,12 +27,28 @@ return {
         }
       },
       sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'encoding', 'fileformat' },
-        lualine_c = { 'filetype', 'filename', 'diagnostics' },
-        lualine_x = { 'diff' },
-        lualine_y = { 'branch' },
-        lualine_z = { 'progress', 'location' }
+        lualine_a = {
+          { "fancy_mode", width = 4 }
+        },
+        lualine_b = {
+          { "fancy_branch" },
+          { "fancy_diff" },
+        },
+        lualine_c = {
+          { "fancy_cwd", substitute_home = true }
+        },
+        lualine_x = {
+          { "fancy_macro" },
+          { "fancy_diagnostics" },
+          { "fancy_searchcount" },
+          { "fancy_location" },
+        },
+        lualine_y = {
+          { "fancy_filetype" }
+        },
+        lualine_z = {
+          { "fancy_lsp_servers" }
+        },
       },
       inactive_sections = {
         lualine_a = {},
@@ -44,7 +61,10 @@ return {
       tabline = {},
       winbar = {},
       inactive_winbar = {},
-      extensions = {}
+      extensions = {},
+      disabled_filetypes = {
+        'neo-tree'
+      }
     })
   end
 }
