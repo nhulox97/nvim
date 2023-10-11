@@ -2,17 +2,17 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
+require('luasnip.loaders.from_vscode').lazy_load()
+
 require("lspconfig")["lua_ls"].setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
 
-
 require("lspconfig")["tsserver"].setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
-
 
 require("lspconfig")["vimls"].setup({
   on_attach = on_attach,
