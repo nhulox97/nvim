@@ -9,10 +9,11 @@ return {
       options = {
         icons_enabled = true,
         theme = 'horizon', -- auto | horizon | gruvbox_dark | molokai | iceberg_dark | wombat | modus-vivendi | material
-        component_separators = { left = '', right = '' },
+        -- component_separators = { left = '', right = '' },
+        component_separators = { left = '|', right = '|' },
         -- component_separators = { left = '', right = '' },
         -- section_separators = { left = '', right = '' },
-        section_separators = { left = ' ', right = ' ' },
+        section_separators = { left = '', right = '' },
         disabled_filetypes = {
           statusline = {},
           winbar = {},
@@ -28,7 +29,7 @@ return {
       },
       sections = {
         lualine_a = {
-          { "fancy_mode", width = 4 }
+          { "fancy_mode", width = 6 }
         },
         lualine_b = {
           { "fancy_branch" },
