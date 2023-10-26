@@ -19,4 +19,10 @@ return {
   {
     'olimorris/onedarkpro.nvim',
   },
+  {
+    "bluz71/vim-nightfly-colors"
+  },
+  {
+    'NLKNguyen/papercolor-theme'
+  }
 }
