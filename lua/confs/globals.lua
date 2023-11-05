@@ -29,6 +29,12 @@ vim.g.gitblame_date_format = '%r'
 
 vim.g.nvim_tree_respect_buf_cwd = 1
 
+-- make editor transparent
+vim.cmd([[
+   highlight Normal guibg=none
+   highlight NonText guibg=none
+]])
+
 if vim.fn.has("wsl") == 1 then
    if vim.fn.executable("wl-copy") == 0 then
       print("wl-clipboard not found, clipboard integration won't work")
