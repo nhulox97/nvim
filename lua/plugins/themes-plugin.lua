@@ -5,6 +5,10 @@ return {
     config = true,
   },
   {
+    "bluz71/vim-nightfly-colors",
+    priority = 1000
+  },
+  {
     'rebelot/kanagawa.nvim',
   },
   {
@@ -18,9 +22,6 @@ return {
   },
   {
     'olimorris/onedarkpro.nvim',
-  },
-  {
-    "bluz71/vim-nightfly-colors"
   },
   {
     'NLKNguyen/papercolor-theme'
