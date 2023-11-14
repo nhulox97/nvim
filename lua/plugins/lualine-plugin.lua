@@ -12,7 +12,6 @@ return {
         -- component_separators = { left = '', right = '' },
         component_separators = { left = '|', right = '|' },
         -- component_separators = { left = '', right = '' },
-        -- section_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = {
           statusline = {},
@@ -29,7 +28,7 @@ return {
       },
       sections = {
         lualine_a = {
-          { "fancy_mode", width = 6 }
+          { "fancy_mode", width = 8 }
         },
         lualine_b = {
           { "fancy_branch" },
