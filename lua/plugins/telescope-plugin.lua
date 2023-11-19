@@ -14,14 +14,18 @@ return {
       pickers = {
         find_files = {
           dotfiles = true,
-          hidden = true
+          hidden = true,
+          theme = 'ivy'
         },
         diagnostics = {
           theme = "dropdown",
         },
+        git_branches = {
+          theme = 'dropdown'
+        }
       },
       defaults = {
-        file_ignore_patterns = { "node_modules", "plugged", "dist" },
+        file_ignore_patterns = { "node_modules", "plugged", "dist", ".git" },
       },
       extensions = {
         package_info = {
