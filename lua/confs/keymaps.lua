@@ -6,9 +6,17 @@ vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()
 vim.keymap.set("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>", opts)
 vim.keymap.set("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()<CR>", opts)
 
+vim.keymap.set("n", "<leader>gc", ":lua require('telescope.builtin').git_commits()<CR>", opts)
+vim.keymap.set("n", "<leader>gf", ":lua require('telescope.builtin').git_files()<CR>", opts)
+vim.keymap.set("n", "<leader>gb", ":lua require('telescope.builtin').git_branches()<CR>", opts)
+vim.keymap.set("n", "<leader>gs", ":lua require('telescope.builtin').git_status()<CR>", opts)
+
+vim.keymap.set("n", "<leader>cs", ":lua require('telescope.builtin').colorscheme()<CR>", opts)
+
 vim.keymap.set("n", "<leader>tf", ":Neotree toggle current reveal_force_cwd right<CR>", opts)
 vim.keymap.set("n", "<leader>tb", ":Neotree toggle show buffers right<CR>", opts)
 vim.keymap.set("n", "<leader>tg", ":Neotree float git_status<CR>", opts)
+
 vim.keymap.set("n", "<leader>w", ":w<CR>", opts)
 vim.keymap.set("n", "<leader>wa", ":wall<CR>", opts)
 vim.keymap.set("n", "<leader>wq", ":wq<CR>", opts)
