@@ -28,8 +28,9 @@ vim.cmd([[
   nmap <Leader>z 1z=
 ]])
 
-vim.keymap.set("n", "<leader>[", ":bprevious<CR>", opts)
-vim.keymap.set("n", "<leader>]", ":bnext<CR>", opts)
+-- vim.keymap.set("n", "<leader>[", ":bprevious<CR>", opts)
+-- vim.keymap.set("n", "<leader>]", ":bnext<CR>", opts)
+
 vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", opts)         --> jumps to the definition of the symbol under the cursor
 vim.keymap.set("n", "H", ":lua vim.lsp.buf.hover()<CR>", opts)                --> information about the symbol under the cursos in a floating window
 vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)     --> lists all the implementations for the symbol under the cursor in the quickfix window

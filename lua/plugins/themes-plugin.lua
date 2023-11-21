@@ -8,9 +8,7 @@ return {
     "bluz71/vim-nightfly-colors",
     priority = 1000
   },
-  {
-    'rebelot/kanagawa.nvim',
-  },
+  { "nxvu699134/vn-night.nvim" },
   {
     'nyoom-engineering/oxocarbon.nvim',
   },
