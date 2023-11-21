@@ -32,8 +32,14 @@ return {
         },
         offsets = {
           {
+            filetype = "NvimTree",
+            text = "Tree directory",
+            text_align = "left",
+            separator = true,
+          },
+          {
             filetype = "neo-tree",
-            text = "neo-tree",
+            text = "Tree directory",
             text_align = "left",
             separator = true,
           }
