@@ -12,6 +12,17 @@ return {
       },
       renderer = {
         highlight_git = true,
+        indent_markers = {
+          enable = true,
+          inline_arrows = true,
+          icons = {
+            corner = "└",
+            edge = "│",
+            item = "│",
+            bottom = "─",
+            none = " ",
+          },
+        },
         root_folder_modifier = ":t",
         icons = {
           show = {
@@ -44,6 +55,7 @@ return {
       },
       view = {
         side = "right",
+        adaptive_size = true
       },
       filters = {
         dotfiles = false,

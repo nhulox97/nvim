@@ -34,8 +34,8 @@ local function conf_a()
       provider = {
         name = "vi_mode",
         opts = {
-          show_mode_name = true,
-          -- padding = "center", -- Uncomment for extra padding.
+          -- show_mode_name = true,
+          padding = "center", -- Uncomment for extra padding.
         },
       },
       hl = function()
@@ -46,6 +46,10 @@ local function conf_a()
           name = "NeovimModeHLColor",
         }
       end,
+      icon = {
+        str = '  ',
+        always_visible = true,
+      },
       left_sep = "block",
       right_sep = "block",
     },
@@ -65,7 +69,6 @@ local function conf_a()
         fg = "green",
         bg = "darkblue",
       },
-      left_sep = "block",
       right_sep = "block",
     },
     gitDiffRemoved = {
@@ -74,7 +77,6 @@ local function conf_a()
         fg = "red",
         bg = "darkblue",
       },
-      left_sep = "block",
       right_sep = "block",
     },
     gitDiffChanged = {
@@ -83,8 +85,7 @@ local function conf_a()
         fg = "fg",
         bg = "darkblue",
       },
-      left_sep = "block",
-      right_sep = "right_filled",
+      right_sep = "block",
     },
     separator = {
       provider = "",
@@ -93,7 +94,7 @@ local function conf_a()
       provider = {
         name = "file_info",
         opts = {
-          type = "relative-short",
+          type = "base-only",
         },
       },
       hl = {
@@ -130,7 +131,7 @@ local function conf_a()
         bg = "darkblue",
         style = "bold",
       },
-      left_sep = "left_filled",
+      left_sep = "block",
       right_sep = "block",
     },
     file_type = {
@@ -138,7 +139,7 @@ local function conf_a()
         name = "file_type",
         opts = {
           filetype_icon = true,
-          case = "titlecase",
+          case = "lowercase",
         },
       },
       hl = {
