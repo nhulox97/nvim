@@ -156,6 +156,7 @@ local function conf_a()
         fg = "orange",
         bg = "darkblue",
         style = "italic",
+        case = "lowercase",
       },
       left_sep = "block",
       right_sep = "block",
