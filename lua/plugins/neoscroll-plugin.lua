@@ -1,5 +1,5 @@
 return {
   "karb94/neoscroll.nvim",
-  lazy = false,
+  lazy = true,
   config = true
 }

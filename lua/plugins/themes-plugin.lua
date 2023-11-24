@@ -1,27 +1,32 @@
 return {
   {
     'folke/tokyonight.nvim',
-    priority = 1000,
     config = true,
+    event = "VeryLazy"
   },
   {
     "bluz71/vim-nightfly-colors",
-    priority = 1000
+    priority = 1000,
   },
-  { "nxvu699134/vn-night.nvim" },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    event = "VeryLazy",
+  },
+  {
+    "nxvu699134/vn-night.nvim",
+    event = "VeryLazy",
+  },
   {
     'nyoom-engineering/oxocarbon.nvim',
-  },
-  {
-    'Mofiqul/dracula.nvim',
+    event = "VeryLazy",
   },
   {
     'marko-cerovac/material.nvim',
+    event = "VeryLazy",
   },
   {
     'olimorris/onedarkpro.nvim',
-  },
-  {
-    'NLKNguyen/papercolor-theme'
+    event = "VeryLazy",
   }
 }

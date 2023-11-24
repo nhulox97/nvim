@@ -2,6 +2,7 @@
 return {
   'vuki656/package-info.nvim',
   dependencies = { "MunifTanjim/nui.nvim" },
+  lazy = true,
   config = function()
     require("package-info").setup({
       colors = {

@@ -1,5 +1,6 @@
 return {
   'f-person/git-blame.nvim',
   config = true,
-  enabled = true
+  enabled = true,
+  event = "VeryLazy"
 }
